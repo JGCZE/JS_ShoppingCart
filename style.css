@@ -7,3 +7,33 @@
 body {
   font-family: sans-serif;
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 60px;
+  background-color: #212529;
+  color: white;
+  box-shadow: 0 0 19px rgb(72, 67, 67);
+}
+
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #212529;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 4px;
+}
