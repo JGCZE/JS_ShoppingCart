@@ -35,8 +35,8 @@ let basket = []
 
 let generateShop = () => {
   return (shop.innerHTML = shopItemsData
-    .map((x) => {
-      const { id, name, price, desc, img } = x
+    .map((oneItem) => {
+      const { id, name, price, desc, img } = oneItem;
       return `
         <div class="item" id=product-id-${id} >
             <img width="220" src=${img} alt="">
@@ -77,9 +77,16 @@ let increment = (id) => {
 
 let decrement = (id) => {
   let selectedItem = id
-  console.log(selectedItem)
+  let search = basket.find((item) => item.id === selectedItem)
+
+  if ( search.item === 0 ) return 
+    else {
+      search.item -= 1
+    }
+  console.log(basket)
 }
 
 let update = () => {
 
 }
+
